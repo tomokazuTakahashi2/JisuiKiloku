@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		640E5019249E9BE400E7C717 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E5018249E9BE400E7C717 /* Task.swift */; };
+		640E501B249FB8FE00E7C717 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E501A249FB8FE00E7C717 /* Task.swift */; };
 		649F8314249E4AB500023865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8313249E4AB500023865 /* AppDelegate.swift */; };
 		649F8316249E4AB500023865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8315249E4AB500023865 /* SceneDelegate.swift */; };
 		649F8318249E4AB500023865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8317249E4AB500023865 /* ViewController.swift */; };
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		009F940FECFC720496976CDA /* Pods-KaraAge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaraAge.debug.xcconfig"; path = "Target Support Files/Pods-KaraAge/Pods-KaraAge.debug.xcconfig"; sourceTree = "<group>"; };
 		03CDECE8136AC7E3309DBC39 /* Pods-KaraAge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaraAge.release.xcconfig"; path = "Target Support Files/Pods-KaraAge/Pods-KaraAge.release.xcconfig"; sourceTree = "<group>"; };
-		640E5018249E9BE400E7C717 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		640E501A249FB8FE00E7C717 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		649F8310249E4AB500023865 /* KaraAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaraAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649F8313249E4AB500023865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649F8315249E4AB500023865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				649F8313249E4AB500023865 /* AppDelegate.swift */,
 				649F8315249E4AB500023865 /* SceneDelegate.swift */,
 				649F8317249E4AB500023865 /* ViewController.swift */,
-				640E5018249E9BE400E7C717 /* Task.swift */,
+				640E501A249FB8FE00E7C717 /* Task.swift */,
 				649F832D249E782800023865 /* HomeViewController.swift */,
 				649F8319249E4AB500023865 /* Main.storyboard */,
 				649F8331249E96D000023865 /* PostViewController.swift */,
@@ -226,8 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640E501B249FB8FE00E7C717 /* Task.swift in Sources */,
 				649F8332249E96D000023865 /* PostViewController.swift in Sources */,
-				640E5019249E9BE400E7C717 /* Task.swift in Sources */,
 				649F832E249E782800023865 /* HomeViewController.swift in Sources */,
 				649F832B249E6A9300023865 /* TableViewCell.swift in Sources */,
 				649F8318249E4AB500023865 /* ViewController.swift in Sources */,

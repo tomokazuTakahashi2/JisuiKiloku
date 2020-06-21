@@ -109,7 +109,7 @@
                                 </constraints>
                                 <state key="normal" title="投稿する" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="postButton:" destination="hMA-pm-aWs" eventType="touchUpInside" id="Ri3-d6-FW8"/>
+                                    <action selector="postButton:" destination="hMA-pm-aWs" eventType="touchUpInside" id="Pfj-h9-vBC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-bf-vTM">
@@ -153,9 +153,9 @@
                         <viewLayoutGuide key="safeArea" id="v8j-49-df8"/>
                     </view>
                     <connections>
-                        <outlet property="captionLabel" destination="tju-ej-dnL" id="laM-4a-Ffa"/>
-                        <outlet property="imageView" destination="lKR-0t-cC1" id="Aub-Hk-w7k"/>
-                        <outlet property="textField" destination="qS2-7P-Jzh" id="duH-Yt-kIp"/>
+                        <outlet property="captionLabel" destination="tju-ej-dnL" id="8ee-mG-atk"/>
+                        <outlet property="imageView" destination="lKR-0t-cC1" id="dBQ-TO-jeS"/>
+                        <outlet property="textField" destination="qS2-7P-Jzh" id="k0z-f9-Uep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcQ-Iv-FVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

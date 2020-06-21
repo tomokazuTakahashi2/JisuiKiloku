@@ -98,9 +98,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="captionLabel" destination="SbR-kA-Tgp" id="SGL-Ds-ueD"/>
                 <outlet property="dateLabel" destination="9xB-gf-Pip" id="uVL-Dj-bTU"/>
                 <outlet property="postImageView" destination="7wq-3N-ftG" id="IDJ-hL-pQY"/>
-                <outlet property="titleLabel" destination="SbR-kA-Tgp" id="tyE-Vj-vCA"/>
             </connections>
             <point key="canvasLocation" x="31.159420289855074" y="70.647321428571431"/>
         </tableViewCell>

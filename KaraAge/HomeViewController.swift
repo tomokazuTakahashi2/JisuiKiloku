@@ -14,8 +14,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     let realm = try! Realm()
-    var task: Task!
-
+    
     // DB内のタスクが格納されるリスト。
     // 日付近い順\順でソート：降順
     // 以降内容をアップデートするとリスト内は自動的に更新される。
@@ -43,74 +42,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        print("DEBUG_PRINT: viewWillAppear")
-//
-//        if Auth.auth().currentUser != nil {
-//            if self.observing == false {
-//                // 要素が追加されたらpostArrayに追加してTableViewを再表示する
-//                let postsRef = Database.database().reference().child(Const.PostPath)
-//                postsRef.observe(.childAdded, with: { snapshot in
-//                    print("DEBUG_PRINT: .childAddedイベントが発生しました。")
-//
-//                    // PostDataクラスを生成して受け取ったデータを設定する
-//                    if let uid = Auth.auth().currentUser?.uid {
-//                        let postData = PostData(snapshot: snapshot, myId: uid)
-//                        self.postArray.insert(postData, at: 0)
-//
-//                        // TableViewを再表示する
-//                        self.tableView.reloadData()
-//                    }
-//                })
-//                // 要素が変更されたら該当のデータをpostArrayから一度削除した後に新しいデータを追加してTableViewを再表示する
-//                postsRef.observe(.childChanged, with: { snapshot in
-//                    print("DEBUG_PRINT: .childChangedイベントが発生しました。")
-//
-//                    if let uid = Auth.auth().currentUser?.uid {
-//                        // PostDataクラスを生成して受け取ったデータを設定する
-//                        let postData = PostData(snapshot: snapshot, myId: uid)
-//
-//                        // 保持している配列からidが同じものを探す
-//                        var index: Int = 0
-//                        for post in self.postArray {
-//                            if post.id == postData.id {
-//                                index = self.postArray.firstIndex(of: post)!
-//                                break
-//                            }
-//                        }
-//
-//                        // 差し替えるため一度削除する
-//                        self.postArray.remove(at: index)
-//
-//                        // 削除したところに更新済みのデータを追加する
-//                        self.postArray.insert(postData, at: index)
-//
-//                        // TableViewを再表示する
-//                        self.tableView.reloadData()
-//                    }
-//                })
-//
-//                // DatabaseのobserveEventが上記コードにより登録されたため
-//                // trueとする
-//                observing = true
-//            }
-//        } else {
-//            if observing == true {
-//                // ログアウトを検出したら、一旦テーブルをクリアしてオブザーバーを削除する。
-//                // テーブルをクリアする
-//                postArray = []
-//                tableView.reloadData()
-//                // オブザーバーを削除する
-//                let postsRef = Database.database().reference().child(Const.PostPath)
-//                postsRef.removeAllObservers()
-//
-//                // DatabaseのobserveEventが上記コードにより解除されたため
-//                // falseとする
-//                observing = false
-//            }
-//        }
-//    }
+
     
     //セルの数を決める
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -121,12 +53,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セルを取得してデータを設定する
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         
+        let task = taskArray[indexPath.row]
         //imageStringをUIImageに変換
         let imageString = task.imageString
         let image = UIImage(data: Data(base64Encoded: imageString, options: .ignoreUnknownCharacters)!)
         
-        // CellにTaskの値を設定する.
-        let task = taskArray[indexPath.row]
+        // Cellにtaskの値を設定する.
         cell.dateLabel?.text = task.date
         cell.captionLabel?.text = task.caption
         cell.postImageView?.image = image

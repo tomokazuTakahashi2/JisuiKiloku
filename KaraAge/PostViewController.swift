@@ -12,16 +12,19 @@ import SVProgressHUD
 
 class PostViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
     var image: UIImage!
     let realm = try! Realm()
-    var task: Task!
-    
-    @IBOutlet weak var captionLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textField: UITextField!
+    var task = Task()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         self.textField.delegate = self
 
@@ -38,7 +41,7 @@ class PostViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func postButton(_ sender: Any) {
         
-        let caption = self.captionLabel.text
+        let caption = self.captionLabel.text!
         // ImageViewから画像を取得する
         let imageData = imageView.image!.jpegData(compressionQuality: 0.5)
         let imageString = imageData!.base64EncodedString(options: .lineLength64Characters)
@@ -55,9 +58,8 @@ class PostViewController: UIViewController, UITextFieldDelegate {
                 if allTasks.count != 0 {
                     task.id = allTasks.max(ofProperty: "id")! + 1
                 }
-                if let caption = caption{
+                print(task)
                 self.task.caption = caption
-                }
                 self.task.imageString = imageString
                 self.task.date = String(time)
                 realm.add(self.task)
