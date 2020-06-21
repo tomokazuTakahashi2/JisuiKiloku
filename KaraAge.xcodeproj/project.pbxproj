@@ -3,19 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640E5019249E9BE400E7C717 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E5018249E9BE400E7C717 /* Task.swift */; };
 		649F8314249E4AB500023865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8313249E4AB500023865 /* AppDelegate.swift */; };
 		649F8316249E4AB500023865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8315249E4AB500023865 /* SceneDelegate.swift */; };
 		649F8318249E4AB500023865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8317249E4AB500023865 /* ViewController.swift */; };
 		649F831B249E4AB500023865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649F8319249E4AB500023865 /* Main.storyboard */; };
 		649F831D249E4ABB00023865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649F831C249E4ABB00023865 /* Assets.xcassets */; };
 		649F8320249E4ABB00023865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649F831E249E4ABB00023865 /* LaunchScreen.storyboard */; };
+		649F832B249E6A9300023865 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8329249E6A9300023865 /* TableViewCell.swift */; };
+		649F832C249E6A9300023865 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 649F832A249E6A9300023865 /* TableViewCell.xib */; };
+		649F832E249E782800023865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F832D249E782800023865 /* HomeViewController.swift */; };
+		649F8330249E86D100023865 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649F832F249E86D000023865 /* GoogleService-Info.plist */; };
+		649F8332249E96D000023865 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8331249E96D000023865 /* PostViewController.swift */; };
+		9ED9552F169164B5C95F0325 /* Pods_KaraAge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1EFBDECD7B9744FF2193 /* Pods_KaraAge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009F940FECFC720496976CDA /* Pods-KaraAge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaraAge.debug.xcconfig"; path = "Target Support Files/Pods-KaraAge/Pods-KaraAge.debug.xcconfig"; sourceTree = "<group>"; };
+		03CDECE8136AC7E3309DBC39 /* Pods-KaraAge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaraAge.release.xcconfig"; path = "Target Support Files/Pods-KaraAge/Pods-KaraAge.release.xcconfig"; sourceTree = "<group>"; };
+		640E5018249E9BE400E7C717 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		649F8310249E4AB500023865 /* KaraAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaraAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649F8313249E4AB500023865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649F8315249E4AB500023865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +34,12 @@
 		649F831C249E4ABB00023865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649F831F249E4ABB00023865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		649F8321249E4ABB00023865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649F8329249E6A9300023865 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		649F832A249E6A9300023865 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		649F832D249E782800023865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		649F832F249E86D000023865 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		649F8331249E96D000023865 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		9D3E1EFBDECD7B9744FF2193 /* Pods_KaraAge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaraAge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED9552F169164B5C95F0325 /* Pods_KaraAge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,8 @@
 			children = (
 				649F8312249E4AB500023865 /* KaraAge */,
 				649F8311249E4AB500023865 /* Products */,
+				6B9CE0962229D1E1582BA288 /* Pods */,
+				BAF5FD1268DC6F01DCB98729 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +78,35 @@
 				649F8313249E4AB500023865 /* AppDelegate.swift */,
 				649F8315249E4AB500023865 /* SceneDelegate.swift */,
 				649F8317249E4AB500023865 /* ViewController.swift */,
+				640E5018249E9BE400E7C717 /* Task.swift */,
+				649F832D249E782800023865 /* HomeViewController.swift */,
 				649F8319249E4AB500023865 /* Main.storyboard */,
+				649F8331249E96D000023865 /* PostViewController.swift */,
+				649F8329249E6A9300023865 /* TableViewCell.swift */,
+				649F832A249E6A9300023865 /* TableViewCell.xib */,
 				649F831C249E4ABB00023865 /* Assets.xcassets */,
 				649F831E249E4ABB00023865 /* LaunchScreen.storyboard */,
 				649F8321249E4ABB00023865 /* Info.plist */,
+				649F832F249E86D000023865 /* GoogleService-Info.plist */,
 			);
 			path = KaraAge;
+			sourceTree = "<group>";
+		};
+		6B9CE0962229D1E1582BA288 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				009F940FECFC720496976CDA /* Pods-KaraAge.debug.xcconfig */,
+				03CDECE8136AC7E3309DBC39 /* Pods-KaraAge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BAF5FD1268DC6F01DCB98729 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D3E1EFBDECD7B9744FF2193 /* Pods_KaraAge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 649F8324249E4ABB00023865 /* Build configuration list for PBXNativeTarget "KaraAge" */;
 			buildPhases = (
+				A80256108783EB7DA244577B /* [CP] Check Pods Manifest.lock */,
 				649F830C249E4AB500023865 /* Sources */,
 				649F830D249E4AB500023865 /* Frameworks */,
 				649F830E249E4AB500023865 /* Resources */,
+				DFD6E705F5B09EFA6853488B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				649F8320249E4ABB00023865 /* LaunchScreen.storyboard in Resources */,
+				649F832C249E6A9300023865 /* TableViewCell.xib in Resources */,
+				649F8330249E86D100023865 /* GoogleService-Info.plist in Resources */,
 				649F831D249E4ABB00023865 /* Assets.xcassets in Resources */,
 				649F831B249E4AB500023865 /* Main.storyboard in Resources */,
 			);
@@ -133,11 +179,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A80256108783EB7DA244577B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaraAge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFD6E705F5B09EFA6853488B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaraAge/Pods-KaraAge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaraAge/Pods-KaraAge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaraAge/Pods-KaraAge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		649F830C249E4AB500023865 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649F8332249E96D000023865 /* PostViewController.swift in Sources */,
+				640E5019249E9BE400E7C717 /* Task.swift in Sources */,
+				649F832E249E782800023865 /* HomeViewController.swift in Sources */,
+				649F832B249E6A9300023865 /* TableViewCell.swift in Sources */,
 				649F8318249E4AB500023865 /* ViewController.swift in Sources */,
 				649F8314249E4AB500023865 /* AppDelegate.swift in Sources */,
 				649F8316249E4AB500023865 /* SceneDelegate.swift in Sources */,
@@ -282,6 +374,7 @@
 		};
 		649F8325249E4ABB00023865 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009F940FECFC720496976CDA /* Pods-KaraAge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +387,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.KaraAge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		649F8326249E4ABB00023865 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03CDECE8136AC7E3309DBC39 /* Pods-KaraAge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.KaraAge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
