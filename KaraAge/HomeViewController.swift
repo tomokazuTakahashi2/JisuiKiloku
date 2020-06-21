@@ -58,8 +58,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let imageString = task.imageString
         let image = UIImage(data: Data(base64Encoded: imageString, options: .ignoreUnknownCharacters)!)
         
+        let time = task.date
+        let date = Date(timeIntervalSinceReferenceDate: TimeInterval(time)!)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let dateString = formatter.string(from: date)
+        
         // Cellにtaskの値を設定する.
-        cell.dateLabel?.text = task.date
+        cell.dateLabel?.text = dateString
         cell.captionLabel?.text = task.caption
         cell.postImageView?.image = image
 
