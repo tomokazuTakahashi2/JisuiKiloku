@@ -101,6 +101,11 @@
                 <outlet property="captionLabel" destination="SbR-kA-Tgp" id="SGL-Ds-ueD"/>
                 <outlet property="dateLabel" destination="9xB-gf-Pip" id="uVL-Dj-bTU"/>
                 <outlet property="postImageView" destination="7wq-3N-ftG" id="IDJ-hL-pQY"/>
+                <outlet property="starButton1" destination="qRu-fn-SQN" id="IXX-5Q-p15"/>
+                <outlet property="starButton2" destination="fda-Tb-mfd" id="HOU-SC-RKU"/>
+                <outlet property="starButton3" destination="Kyn-Xg-Alc" id="ziV-66-MMg"/>
+                <outlet property="starButton4" destination="S0W-ya-Pjv" id="e5I-Zf-jTG"/>
+                <outlet property="starButton5" destination="gnS-uv-SVj" id="Fek-Nb-XmU"/>
             </connections>
             <point key="canvasLocation" x="31.159420289855074" y="70.647321428571431"/>
         </tableViewCell>

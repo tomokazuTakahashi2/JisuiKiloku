@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let realm = try! Realm()
     
+    
     // DB内のタスクが格納されるリスト。
     // 日付近い順\順でソート：降順
     // 以降内容をアップデートするとリスト内は自動的に更新される。
@@ -58,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let imageString = task.imageString
         let image = UIImage(data: Data(base64Encoded: imageString, options: .ignoreUnknownCharacters)!)
         
+        //日付
         let time = task.date
         let date = Date(timeIntervalSinceReferenceDate: TimeInterval(time)!)
         let formatter = DateFormatter()
@@ -68,6 +70,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.dateLabel?.text = dateString
         cell.captionLabel?.text = task.caption
         cell.postImageView?.image = image
+        
+        cell.setButton(taskArray[indexPath.row])
+        
+        // セル内のボタンのアクションをソースコードで設定する
+        cell.starButton1.addTarget(self, action:#selector(starButton1(_:forEvent:)), for: .touchUpInside)
+        cell.starButton2.addTarget(self, action:#selector(starButton2(_:forEvent:)), for: .touchUpInside)
+        cell.starButton3.addTarget(self, action:#selector(starButton3(_:forEvent:)), for: .touchUpInside)
+        cell.starButton4.addTarget(self, action:#selector(starButton4(_:forEvent:)), for: .touchUpInside)
+        cell.starButton5.addTarget(self, action:#selector(starButton5(_:forEvent:)), for: .touchUpInside)
 
         return cell
     }
@@ -90,5 +101,327 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+    }
+    //MARK: - 星ボタン
+     // 星ボタン１
+     @objc func starButton1(_ sender: UIButton, forEvent event: UIEvent) {
+         print("DEBUG_PRINT:星ボタン１がタップされました。")
+
+         // タップされたセルのインデックスを求める
+         let touch = event.allTouches?.first
+         let point = touch!.location(in: self.tableView)
+         let indexPath = tableView.indexPathForRow(at: point)
+
+         // 配列からタップされたインデックスのデータを取り出す
+         let task = taskArray[indexPath!.row]
+        
+        //星ボタン１がタップされていたら、
+         if task.tapped1 == true{
+            //かつtapped2がfalseの時
+            if task.tapped2 == false{
+                //tapped1をfalseにする
+                try! realm.write {
+                    task.tapped1 = false
+                }
+            }else if task.tapped2 == true && task.tapped3 == true && task.tapped4 == true && task.tapped5 == true{
+                //tapped1~5をfalseにする
+                try! realm.write {
+                    task.tapped1 = false
+                    task.tapped2 = false
+                    task.tapped3 = false
+                    task.tapped4 = false
+                    task.tapped5 = false
+                }
+            }else if task.tapped2 == true && task.tapped3 == true && task.tapped4 == true{
+                //tapped1~4をfalseにする
+                try! realm.write {
+                    task.tapped1 = false
+                    task.tapped2 = false
+                    task.tapped3 = false
+                    task.tapped4 = false
+                }
+            }else if task.tapped2 == true && task.tapped3 == true{
+                //tapped1~3をfalseにする
+                try! realm.write {
+                    task.tapped1 = false
+                    task.tapped2 = false
+                    task.tapped3 = false
+                }
+            }else{
+                //tapped1,2をfalseにする
+                try! realm.write {
+                    task.tapped1 = false
+                    task.tapped2 = false
+                }
+            }
+         //星ボタン１がタップされていなかったら、
+         } else {
+            //tapped１をtrueにする
+            try! realm.write {
+                task.tapped1 = true
+            }
+         }
+        // TableViewを再表示する
+        self.tableView.reloadData()
+        print("tapped1=\(task.tapped1)")
+    }
+    //星ボタン２
+    @objc func starButton2(_ sender: UIButton, forEvent event: UIEvent) {
+         print("DEBUG_PRINT:星ボタン2がタップされました。")
+
+         // タップされたセルのインデックスを求める
+         let touch = event.allTouches?.first
+         let point = touch!.location(in: self.tableView)
+         let indexPath = tableView.indexPathForRow(at: point)
+
+         // 配列からタップされたインデックスのデータを取り出す
+         let task = taskArray[indexPath!.row]
+        
+            //星ボタン２がタップされていたら、
+             if task.tapped2 == true{
+                //かつtapped3がfalseだったら
+                if task.tapped3 == false{
+                    //tapped2をfalseにする
+                    try! realm.write {
+                        task.tapped2 = false
+                    }
+                //3~5がtrueだったら
+                }else if task.tapped3 == true && task.tapped4 == true && task.tapped5 == true{
+                    //tapped2~5をfalseにする
+                    try! realm.write {
+                        task.tapped2 = false
+                        task.tapped3 = false
+                        task.tapped4 = false
+                        task.tapped5 = false
+                    }
+                //３と４がtrueだったら
+                }else if task.tapped3 == true && task.tapped4 == true{
+                    //tapped2~4をfalseにする
+                    try! realm.write {
+                        task.tapped2 = false
+                        task.tapped3 = false
+                        task.tapped4 = false
+                    }
+                
+                //３がtrueだったら
+                }else{
+                    //tapped2とtapped3をfalseにする
+                    try! realm.write {
+                        task.tapped2 = false
+                        task.tapped3 = false
+                    }
+                }
+             //星ボタン２がタップされていなかったら、
+             } else {
+                //かつ、tapped1がtrueだったら、
+                if task.tapped1 == true{
+                    //tapped2をtrueにする
+                    try! realm.write {
+                        task.tapped2 = true
+                    }
+                //かつ、tapped1がfalseだったら、
+                }else{
+                    //tapped1とtapped2をtrueにする
+                    try! realm.write {
+                        task.tapped1 = true
+                        task.tapped2 = true
+                    }
+                }
+             }
+        // TableViewを再表示する
+        self.tableView.reloadData()
+        print("tapped2=\(task.tapped2)")
+        print("tapped5=\(task.tapped5)")
+        
+    }
+    //星ボタン3
+    @objc func starButton3(_ sender: UIButton, forEvent event: UIEvent) {
+         print("DEBUG_PRINT:星ボタン3がタップされました。")
+
+         // タップされたセルのインデックスを求める
+         let touch = event.allTouches?.first
+         let point = touch!.location(in: self.tableView)
+         let indexPath = tableView.indexPathForRow(at: point)
+
+         // 配列からタップされたインデックスのデータを取り出す
+         let task = taskArray[indexPath!.row]
+        
+            //星ボタン3がタップされていたら、
+             if task.tapped3 == true{
+                //かつtapped4がfalseだったら、
+                if task.tapped4 == false{
+                    //tapped3をfalseにする
+                    try! realm.write {
+                        task.tapped3 = false
+                    }
+                }else if task.tapped4 == true && task.tapped5 == true{
+                    try! realm.write {
+                        task.tapped3 = false
+                        task.tapped4 = false
+                        task.tapped5 = false
+                    }
+                }else{
+                    try! realm.write {
+                        task.tapped3 = false
+                        task.tapped4 = false
+                    }
+                }
+             //星ボタン3がタップされていなかったら、
+             } else {
+                //かつ、tapped2がtrueだったら、
+                if task.tapped2 == true{
+                    //tapped3をtrueにする
+                    try! realm.write {
+                        task.tapped3 = true
+                    }
+                //あるいは、tapped1,tapped2がfalseだったら、
+                }else if task.tapped1 == false && task.tapped2 == false{
+                    //tapped1とtapped2とtapped3をtrueにする
+                    try! realm.write {
+                        task.tapped1 = true
+                        task.tapped2 = true
+                        task.tapped3 = true
+                    }
+                }else if task.tapped2 == false{
+                    //tapped2とtapped3をtrueにする
+                    try! realm.write {
+                        task.tapped2 = true
+                        task.tapped3 = true
+                    }
+                }
+             }
+        // TableViewを再表示する
+        self.tableView.reloadData()
+        print("tapped3=\(task.tapped3)")
+    }
+    //星ボタン4
+    @objc func starButton4(_ sender: UIButton, forEvent event: UIEvent) {
+         print("DEBUG_PRINT:星ボタン4がタップされました。")
+
+         // タップされたセルのインデックスを求める
+         let touch = event.allTouches?.first
+         let point = touch!.location(in: self.tableView)
+         let indexPath = tableView.indexPathForRow(at: point)
+
+         // 配列からタップされたインデックスのデータを取り出す
+         let task = taskArray[indexPath!.row]
+
+            //星ボタン4がタップされていたら、
+             if task.tapped4 == true{
+                if task.tapped5 == false{
+                    //tapped4をfalseにする
+                    try! realm.write {
+                        task.tapped4 = false
+                    }
+                }else{
+                    //４と５をfalseにする
+                    try! realm.write {
+                        task.tapped4 = false
+                        task.tapped5 = false
+                    }
+                }
+             //星ボタン4がタップされていなかったら、
+             } else {
+                //かつ、tapped3がtrueだったら、
+                if task.tapped3 == true{
+                    //tapped4をtrueにする
+                    try! realm.write {
+                        task.tapped4 = true
+                    }
+                //あるいは、tapped1~tapped3がfalseだったら、
+                }else if task.tapped1 == false && task.tapped2 == false && task.tapped3 == false{
+    
+                    //tapped1とtapped2とtapped3とtapped4をtrueにする
+                    try! realm.write {
+                        task.tapped1 = true
+                        task.tapped2 = true
+                        task.tapped3 = true
+                        task.tapped4 = true
+                    }
+                }else if task.tapped2 == false && task.tapped3 == false{
+                
+                    //tapped2とtapped3とtapped4をtrueにする
+                    try! realm.write {
+                        task.tapped2 = true
+                        task.tapped3 = true
+                        task.tapped4 = true
+                    }
+                }else if task.tapped3 == false{
+     
+                    //tapped3とtapped4をtrueにする
+                    try! realm.write {
+                        task.tapped3 = true
+                        task.tapped4 = true
+                    }
+                }
+             }
+        // TableViewを再表示する
+        self.tableView.reloadData()
+        print("tapped4=\(task.tapped4)")
+    }
+    //星ボタン5
+    @objc func starButton5(_ sender: UIButton, forEvent event: UIEvent) {
+         print("DEBUG_PRINT:星ボタン5がタップされました。")
+
+         // タップされたセルのインデックスを求める
+         let touch = event.allTouches?.first
+         let point = touch!.location(in: self.tableView)
+         let indexPath = tableView.indexPathForRow(at: point)
+
+         // 配列からタップされたインデックスのデータを取り出す
+         let task = taskArray[indexPath!.row]
+
+            //星ボタン5がタップされていたら、
+             if task.tapped5 == true{
+                //tapped5をfalseにする
+                try! realm.write {
+                    task.tapped5 = false
+                }
+
+             //星ボタン5がタップされていなかったら、
+             } else {
+                //かつ、tapped4がtrueだったら、
+                if task.tapped4 == true{
+                    //tapped5をtrueにする
+                    try! realm.write {
+                        task.tapped5 = true
+                    }
+                //あるいは、tapped1~tapped4がfalseだったら、
+                }else if task.tapped1 == false && task.tapped2 == false && task.tapped3 == false && task.tapped4 == false{
+           
+                    //tapped1とtapped2とtapped3とtapped4とtapped5をtrueにする
+                    try! realm.write {
+                        task.tapped1 = true
+                        task.tapped2 = true
+                        task.tapped3 = true
+                        task.tapped4 = true
+                        task.tapped5 = true
+                    }
+                }else if task.tapped2 == false && task.tapped3 == false && task.tapped4 == false{
+                    //tapped2とtapped3とtapped4とtapped5をtrueにする
+                    try! realm.write {
+                        task.tapped2 = true
+                        task.tapped3 = true
+                        task.tapped4 = true
+                        task.tapped5 = true
+                    }
+                }else if task.tapped3 == false && task.tapped4 == false{
+                    //tapped3とtapped4とtapped5をtrueにする
+                    try! realm.write {
+                        task.tapped3 = true
+                        task.tapped4 = true
+                        task.tapped5 = true
+                    }
+                }else if task.tapped4 == false{
+                    //tapped4とtapped5をtrueにする
+                    try! realm.write {
+                        task.tapped4 = true
+                        task.tapped5 = true
+                    }
+                }
+             }
+        // TableViewを再表示する
+        self.tableView.reloadData()
+        print("tapped5=\(task.tapped5)")
     }
 }

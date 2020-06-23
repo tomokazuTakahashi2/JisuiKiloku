@@ -19,8 +19,17 @@ class Task: Object {
         // 画像
         @objc dynamic var imageString = ""
 
-        /// 日時
+        // 日時
         @objc dynamic var date = ""
+        
+        //タップ済み
+        @objc dynamic var tapped1 = false
+        @objc dynamic var tapped2 = false
+        @objc dynamic var tapped3 = false
+        @objc dynamic var tapped4 = false
+        @objc dynamic var tapped5 = false
+
+        let taps = List<StarBottun>()
 
         /**
          id をプライマリーキーとして設定
@@ -29,3 +38,6 @@ class Task: Object {
             return "id"
         }
     }
+class StarBottun: Object {
+    @objc dynamic var taps: Int = 0
+}
