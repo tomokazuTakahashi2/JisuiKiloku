@@ -62,9 +62,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //日付
         let time = task.date
         let date = Date(timeIntervalSinceReferenceDate: TimeInterval(time)!)
+        print(date)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         let dateString = formatter.string(from: date)
+        print(dateString)
         
         // Cellにtaskの値を設定する.
         cell.dateLabel?.text = dateString

@@ -40,13 +40,13 @@ class PostViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func postButton(_ sender: Any) {
-        
+        //キャプションを設定
         let caption = self.captionLabel.text!
         // ImageViewから画像を取得する
         let imageData = imageView.image!.jpegData(compressionQuality: 0.5)
         let imageString = imageData!.base64EncodedString(options: .lineLength64Characters)
 
-        // 時間
+        // 時間を設定
         let time = Date.timeIntervalSinceReferenceDate
         
         
