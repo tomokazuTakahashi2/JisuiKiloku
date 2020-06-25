@@ -32,9 +32,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
         
-        // テーブルセルのタップを無効にする
-        tableView.allowsSelection = false
-
         // テーブル行の高さをAutoLayoutで自動調整する
         tableView.rowHeight = UITableView.automaticDimension
     }
@@ -43,8 +40,32 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-
+    // MARK: -prepare(for segue
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        let nextViewController:NextViewController = segue.destination as! NextViewController
+        
+        //セグエのアイデンティファーが"cellSegue" だったら
+        if segue.identifier == "cellSegue" {
+            //taskArray[indexPath!.row]をnextViewControllerのtaskとする
+            let indexPath = self.tableView.indexPathForSelectedRow
+            nextViewController.task = taskArray[indexPath!.row]
+        
+//        } else {
+//            let task = Task()
+//            task.date = Date()
+//
+//            let allTasks = realm.objects(Task.self)
+//            if allTasks.count != 0 {
+//                task.id = allTasks.max(ofProperty: "id")! + 1
+//            }
+//
+//            nextViewController.task = task
+        }
+    }
+
+    // MARK: -UITableViewDelegateプロトコルのメソッド
     //セルの数を決める
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskArray.count
@@ -59,14 +80,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let imageString = task.imageString
         let image = UIImage(data: Data(base64Encoded: imageString, options: .ignoreUnknownCharacters)!)
         
-        //日付
+    //日付
+        //task.dateのString型の日付を取得
         let time = task.date
-        let date = Date(timeIntervalSinceReferenceDate: TimeInterval(time)!)
-        print(date)
+        print(time)//614599380.761842
+        //String型をDate型に変換
+        guard let intervalTime = TimeInterval(time) else{return cell}
+        let date = Date(timeIntervalSinceReferenceDate: intervalTime)
+        print(date)//2020-06-23 10:03:00 +0000
+        //日付のフォーマットを設定
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        //Date型にしたdateを"yyyy-MM-dd HH:mm"に変換
         let dateString = formatter.string(from: date)
-        print(dateString)
+        print(dateString)//2020-06-23 19:03
+        
         
         // Cellにtaskの値を設定する.
         cell.dateLabel?.text = dateString
@@ -87,6 +115,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //セルの高さを設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
+    }
+    // MARK: -UITableViewDelegateプロトコルのメソッド
+    // 各セルを選択した時に実行されるメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "cellSegue",sender: nil)
     }
     // セルが削除が可能なことを伝えるメソッド
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle {

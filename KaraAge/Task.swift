@@ -22,10 +22,10 @@ class Task: Object {
         // 日時
         @objc dynamic var date = ""
     
-//        //材料
-//        @objc dynamic var foodstuff = ""
-//        //作り方
-//        @objc dynamic var recipe = ""
+        //材料
+        @objc dynamic var foodstuff = ""
+        //作り方
+        @objc dynamic var recipe = ""
         
         //タップ済み
         @objc dynamic var tapped1 = false
