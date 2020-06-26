@@ -10,6 +10,7 @@
 		640E501B249FB8FE00E7C717 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E501A249FB8FE00E7C717 /* Task.swift */; };
 		640E501D24A2495300E7C717 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E501C24A2495300E7C717 /* NextViewController.swift */; };
 		640E501F24A638FA00E7C717 /* ActivityItemsorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E501E24A638FA00E7C717 /* ActivityItemsorce.swift */; };
+		640E502324A6542C00E7C717 /* MyUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E502224A6542C00E7C717 /* MyUINavigationController.swift */; };
 		649F8314249E4AB500023865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8313249E4AB500023865 /* AppDelegate.swift */; };
 		649F8316249E4AB500023865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8315249E4AB500023865 /* SceneDelegate.swift */; };
 		649F8318249E4AB500023865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8317249E4AB500023865 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		640E501A249FB8FE00E7C717 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		640E501C24A2495300E7C717 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		640E501E24A638FA00E7C717 /* ActivityItemsorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemsorce.swift; sourceTree = "<group>"; };
+		640E502224A6542C00E7C717 /* MyUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUINavigationController.swift; sourceTree = "<group>"; };
 		649F8310249E4AB500023865 /* KaraAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaraAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649F8313249E4AB500023865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649F8315249E4AB500023865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				649F8315249E4AB500023865 /* SceneDelegate.swift */,
 				640E501A249FB8FE00E7C717 /* Task.swift */,
 				649F8319249E4AB500023865 /* Main.storyboard */,
+				640E502224A6542C00E7C717 /* MyUINavigationController.swift */,
 				649F8317249E4AB500023865 /* ViewController.swift */,
 				649F832D249E782800023865 /* HomeViewController.swift */,
 				640E501E24A638FA00E7C717 /* ActivityItemsorce.swift */,
@@ -235,6 +238,7 @@
 				640E501B249FB8FE00E7C717 /* Task.swift in Sources */,
 				640E501D24A2495300E7C717 /* NextViewController.swift in Sources */,
 				649F8332249E96D000023865 /* PostViewController.swift in Sources */,
+				640E502324A6542C00E7C717 /* MyUINavigationController.swift in Sources */,
 				649F832E249E782800023865 /* HomeViewController.swift in Sources */,
 				640E501F24A638FA00E7C717 /* ActivityItemsorce.swift in Sources */,
 				649F832B249E6A9300023865 /* TableViewCell.swift in Sources */,

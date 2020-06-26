@@ -33,6 +33,8 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    
     func setButton(_ task:Task){
         //星ボタン１
         if task.tapped1 == true {

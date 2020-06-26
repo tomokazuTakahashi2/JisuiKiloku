@@ -39,6 +39,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
+//        //モーダル表示じゃなくする
+//        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "Next")
+//        nextViewController?.modalPresentationStyle = .fullScreen
+//        self.present(nextViewController!, animated: true, completion: nil)
     }
     // MARK: -prepare(for segue
     
