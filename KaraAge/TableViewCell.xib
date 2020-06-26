@@ -74,14 +74,20 @@
                             <constraint firstAttribute="height" constant="150" id="str-nt-XMM"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIJ-pu-fjQ">
+                        <rect key="frame" x="175" y="82" width="19" height="22"/>
+                        <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="7wq-3N-ftG" secondAttribute="bottom" constant="10" id="0En-eD-VpQ"/>
                     <constraint firstItem="9xB-gf-Pip" firstAttribute="leading" secondItem="7wq-3N-ftG" secondAttribute="trailing" constant="10" id="0o1-2O-Fv3"/>
                     <constraint firstItem="9xB-gf-Pip" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="1Rf-in-g0V"/>
                     <constraint firstItem="7wq-3N-ftG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3J5-JF-Ugi"/>
+                    <constraint firstItem="YIJ-pu-fjQ" firstAttribute="leading" secondItem="7wq-3N-ftG" secondAttribute="trailing" constant="10" id="4k1-th-qMk"/>
                     <constraint firstAttribute="trailing" secondItem="gnS-uv-SVj" secondAttribute="trailing" constant="10" id="GVC-FV-BkJ"/>
                     <constraint firstItem="S0W-ya-Pjv" firstAttribute="bottom" secondItem="qRu-fn-SQN" secondAttribute="bottom" id="Jvm-fM-Kko"/>
+                    <constraint firstItem="YIJ-pu-fjQ" firstAttribute="top" secondItem="SbR-kA-Tgp" secondAttribute="bottom" constant="20" id="KjT-SA-104"/>
                     <constraint firstItem="qRu-fn-SQN" firstAttribute="leading" secondItem="7wq-3N-ftG" secondAttribute="trailing" constant="10" id="L8m-r9-Xsn"/>
                     <constraint firstItem="7wq-3N-ftG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="NPd-Om-Gf2"/>
                     <constraint firstItem="Kyn-Xg-Alc" firstAttribute="bottom" secondItem="qRu-fn-SQN" secondAttribute="bottom" id="Vbo-xH-JoS"/>
@@ -101,6 +107,7 @@
                 <outlet property="captionLabel" destination="SbR-kA-Tgp" id="SGL-Ds-ueD"/>
                 <outlet property="dateLabel" destination="9xB-gf-Pip" id="uVL-Dj-bTU"/>
                 <outlet property="postImageView" destination="7wq-3N-ftG" id="IDJ-hL-pQY"/>
+                <outlet property="shareButton" destination="YIJ-pu-fjQ" id="dEU-51-TIx"/>
                 <outlet property="starButton1" destination="qRu-fn-SQN" id="IXX-5Q-p15"/>
                 <outlet property="starButton2" destination="fda-Tb-mfd" id="HOU-SC-RKU"/>
                 <outlet property="starButton3" destination="Kyn-Xg-Alc" id="ziV-66-MMg"/>
@@ -111,6 +118,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
         <image name="星（色）" width="225" height="225"/>
     </resources>
 </document>

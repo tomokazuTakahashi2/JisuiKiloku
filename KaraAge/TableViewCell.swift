@@ -19,6 +19,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var starButton3: UIButton!
     @IBOutlet weak var starButton4: UIButton!
     @IBOutlet weak var starButton5: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
 
     override func awakeFromNib() {

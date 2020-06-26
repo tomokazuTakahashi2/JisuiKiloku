@@ -52,16 +52,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let indexPath = self.tableView.indexPathForSelectedRow
             nextViewController.task = taskArray[indexPath!.row]
         
-//        } else {
-//            let task = Task()
-//            task.date = Date()
-//
-//            let allTasks = realm.objects(Task.self)
-//            if allTasks.count != 0 {
-//                task.id = allTasks.max(ofProperty: "id")! + 1
-//            }
-//
-//            nextViewController.task = task
         }
     }
 
@@ -109,6 +99,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.starButton3.addTarget(self, action:#selector(starButton3(_:forEvent:)), for: .touchUpInside)
         cell.starButton4.addTarget(self, action:#selector(starButton4(_:forEvent:)), for: .touchUpInside)
         cell.starButton5.addTarget(self, action:#selector(starButton5(_:forEvent:)), for: .touchUpInside)
+        
+        cell.shareButton.addTarget(self, action:#selector(shareButtonTap(_:forEvent:)), for: .touchUpInside)
 
         return cell
     }
@@ -136,6 +128,34 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+    }
+    //MARK: - シェアボタン
+    @objc func shareButtonTap(_ sender: UIButton, forEvent event: UIEvent) {
+    print("DEBUG_PRINT:シェアボタンがタップされました。")
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        // 配列からタップされたインデックスのデータを取り出す
+        let task = taskArray[indexPath!.row]
+        
+        //imageStringをUIImageに変換
+        let imageString = task.imageString
+        let image = UIImage(data: Data(base64Encoded: imageString, options: .ignoreUnknownCharacters)!)
+        
+        // 上下反転を補正しつつ419430バイト未満にする
+        let arrangedImage = image?.fixedOrientation()?.resizeImage(maxSize: 419430)
+        
+        //UIActivityViewController
+        //あらかじめSNSにあげるデータを用意する（文字列、画像）
+        let activityItems: [Any] = ["", arrangedImage as Any]
+
+        let activityVc = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        present(activityVc, animated: true, completion: {
+
+        })
     }
     //MARK: - 星ボタン
      // 星ボタン１
@@ -458,5 +478,60 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // TableViewを再表示する
         self.tableView.reloadData()
         print("tapped5=\(task.tapped5)")
+    }
+}
+extension UIImage {
+
+    /// 上下逆になった画像を反転する
+    func fixedOrientation() -> UIImage? {
+        if self.imageOrientation == UIImage.Orientation.up {
+            return self
+        }
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+
+    /// イメージ縮小
+    func resizeImage(maxSize: Int) -> UIImage? {
+
+        guard let jpg = self.jpegData(compressionQuality: 1) as NSData? else {
+            return nil
+        }
+        if isLessThanMaxByte(data: jpg, maxDataByte: maxSize) {
+            return self
+        }
+        // 80%に圧縮
+        let _size: CGSize = CGSize(width: (self.size.width * 0.8), height: (self.size.height * 0.8))
+        UIGraphicsBeginImageContext(_size)
+        self.draw(in: CGRect(x: 0, y: 0, width: _size.width, height: _size.height))
+        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+        UIGraphicsEndImageContext()
+        // 再帰処理
+        return newImage.resizeImage(maxSize: maxSize)
+    }
+
+    /// 最大容量チェック
+    func isLessThanMaxByte(data: NSData?, maxDataByte: Int) -> Bool {
+
+        if maxDataByte <= 0 {
+            // 最大容量の指定が無い場合はOK扱い
+            return true
+        }
+        guard let data = data else {
+            fatalError("Data unwrap error")
+        }
+        if data.length < maxDataByte {
+            // 最大容量未満：OK　※以下でも良いがバッファを取ることにした
+            return true
+        }
+        // 最大容量以上：NG
+        return false
     }
 }
