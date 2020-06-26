@@ -8,11 +8,13 @@
 
 import UIKit
 import RealmSwift
+//import TPKeyboardAvoiding（入ってます）
 
 class NextViewController: UIViewController{
 
     @IBOutlet weak var stuffTextView: UITextView!
     @IBOutlet weak var recipeTextView: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
 
     let realm = try! Realm()
@@ -30,7 +32,7 @@ class NextViewController: UIViewController{
         recipeTextView.text = task.recipe
         
     }
-
+    
     //遷移する際に、画面が非表示になるとき呼ばれるメソッド
     override func viewWillDisappear(_ animated: Bool) {
         
