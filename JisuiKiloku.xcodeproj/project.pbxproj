@@ -11,6 +11,7 @@
 		640E501D24A2495300E7C717 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E501C24A2495300E7C717 /* NextViewController.swift */; };
 		640E501F24A638FA00E7C717 /* ActivityItemsorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E501E24A638FA00E7C717 /* ActivityItemsorce.swift */; };
 		640E502324A6542C00E7C717 /* MyUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E502224A6542C00E7C717 /* MyUINavigationController.swift */; };
+		640E504724A7640B00E7C717 /* プライバシーポリシー.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640E504624A7640B00E7C717 /* プライバシーポリシー.txt */; };
 		649F8314249E4AB500023865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8313249E4AB500023865 /* AppDelegate.swift */; };
 		649F8316249E4AB500023865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8315249E4AB500023865 /* SceneDelegate.swift */; };
 		649F8318249E4AB500023865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8317249E4AB500023865 /* ViewController.swift */; };
@@ -22,7 +23,7 @@
 		649F832E249E782800023865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F832D249E782800023865 /* HomeViewController.swift */; };
 		649F8330249E86D100023865 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649F832F249E86D000023865 /* GoogleService-Info.plist */; };
 		649F8332249E96D000023865 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8331249E96D000023865 /* PostViewController.swift */; };
-		9ED9552F169164B5C95F0325 /* Pods_KaraAge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1EFBDECD7B9744FF2193 /* Pods_KaraAge.framework */; };
+		82BE57E41123E8ED602A5892 /* Pods_JisuiKiloku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE76F35E9B3141EFBDB458B /* Pods_JisuiKiloku.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,8 @@
 		640E501C24A2495300E7C717 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		640E501E24A638FA00E7C717 /* ActivityItemsorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemsorce.swift; sourceTree = "<group>"; };
 		640E502224A6542C00E7C717 /* MyUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUINavigationController.swift; sourceTree = "<group>"; };
-		649F8310249E4AB500023865 /* KaraAge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaraAge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		640E504624A7640B00E7C717 /* プライバシーポリシー.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "プライバシーポリシー.txt"; sourceTree = SOURCE_ROOT; };
+		649F8310249E4AB500023865 /* JisuiKiloku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JisuiKiloku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649F8313249E4AB500023865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649F8315249E4AB500023865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		649F8317249E4AB500023865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +47,9 @@
 		649F832D249E782800023865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		649F832F249E86D000023865 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		649F8331249E96D000023865 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		9D3E1EFBDECD7B9744FF2193 /* Pods_KaraAge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaraAge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		915DB4EAB57B146A19914E4A /* Pods-JisuiKiloku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JisuiKiloku.debug.xcconfig"; path = "Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku.debug.xcconfig"; sourceTree = "<group>"; };
+		FA1126AE55E1E8CD9B761EFA /* Pods-JisuiKiloku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JisuiKiloku.release.xcconfig"; path = "Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku.release.xcconfig"; sourceTree = "<group>"; };
+		FBE76F35E9B3141EFBDB458B /* Pods_JisuiKiloku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JisuiKiloku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ED9552F169164B5C95F0325 /* Pods_KaraAge.framework in Frameworks */,
+				82BE57E41123E8ED602A5892 /* Pods_JisuiKiloku.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +67,7 @@
 		649F8307249E4AB500023865 = {
 			isa = PBXGroup;
 			children = (
-				649F8312249E4AB500023865 /* KaraAge */,
+				649F8312249E4AB500023865 /* JisuiKiloku */,
 				649F8311249E4AB500023865 /* Products */,
 				6B9CE0962229D1E1582BA288 /* Pods */,
 				BAF5FD1268DC6F01DCB98729 /* Frameworks */,
@@ -73,12 +77,12 @@
 		649F8311249E4AB500023865 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				649F8310249E4AB500023865 /* KaraAge.app */,
+				649F8310249E4AB500023865 /* JisuiKiloku.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		649F8312249E4AB500023865 /* KaraAge */ = {
+		649F8312249E4AB500023865 /* JisuiKiloku */ = {
 			isa = PBXGroup;
 			children = (
 				649F8313249E4AB500023865 /* AppDelegate.swift */,
@@ -97,8 +101,9 @@
 				649F831E249E4ABB00023865 /* LaunchScreen.storyboard */,
 				649F8321249E4ABB00023865 /* Info.plist */,
 				649F832F249E86D000023865 /* GoogleService-Info.plist */,
+				640E504624A7640B00E7C717 /* プライバシーポリシー.txt */,
 			);
-			path = KaraAge;
+			path = JisuiKiloku;
 			sourceTree = "<group>";
 		};
 		6B9CE0962229D1E1582BA288 /* Pods */ = {
@@ -106,6 +111,8 @@
 			children = (
 				009F940FECFC720496976CDA /* Pods-KaraAge.debug.xcconfig */,
 				03CDECE8136AC7E3309DBC39 /* Pods-KaraAge.release.xcconfig */,
+				915DB4EAB57B146A19914E4A /* Pods-JisuiKiloku.debug.xcconfig */,
+				FA1126AE55E1E8CD9B761EFA /* Pods-JisuiKiloku.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -113,7 +120,7 @@
 		BAF5FD1268DC6F01DCB98729 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D3E1EFBDECD7B9744FF2193 /* Pods_KaraAge.framework */,
+				FBE76F35E9B3141EFBDB458B /* Pods_JisuiKiloku.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		649F830F249E4AB500023865 /* KaraAge */ = {
+		649F830F249E4AB500023865 /* JisuiKiloku */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 649F8324249E4ABB00023865 /* Build configuration list for PBXNativeTarget "KaraAge" */;
+			buildConfigurationList = 649F8324249E4ABB00023865 /* Build configuration list for PBXNativeTarget "JisuiKiloku" */;
 			buildPhases = (
 				A80256108783EB7DA244577B /* [CP] Check Pods Manifest.lock */,
 				649F830C249E4AB500023865 /* Sources */,
@@ -135,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = KaraAge;
+			name = JisuiKiloku;
 			productName = KaraAge;
-			productReference = 649F8310249E4AB500023865 /* KaraAge.app */;
+			productReference = 649F8310249E4AB500023865 /* JisuiKiloku.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 649F830B249E4AB500023865 /* Build configuration list for PBXProject "KaraAge" */;
+			buildConfigurationList = 649F830B249E4AB500023865 /* Build configuration list for PBXProject "JisuiKiloku" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,7 +175,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				649F830F249E4AB500023865 /* KaraAge */,
+				649F830F249E4AB500023865 /* JisuiKiloku */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +189,7 @@
 				649F832C249E6A9300023865 /* TableViewCell.xib in Resources */,
 				649F8330249E86D100023865 /* GoogleService-Info.plist in Resources */,
 				649F831D249E4ABB00023865 /* Assets.xcassets in Resources */,
+				640E504724A7640B00E7C717 /* プライバシーポリシー.txt in Resources */,
 				649F831B249E4AB500023865 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +212,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KaraAge-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-JisuiKiloku-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -217,15 +225,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KaraAge/Pods-KaraAge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KaraAge/Pods-KaraAge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaraAge/Pods-KaraAge-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -386,17 +394,19 @@
 		};
 		649F8325249E4ABB00023865 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 009F940FECFC720496976CDA /* Pods-KaraAge.debug.xcconfig */;
+			baseConfigurationReference = 915DB4EAB57B146A19914E4A /* Pods-JisuiKiloku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = J8LP9MW8T8;
-				INFOPLIST_FILE = KaraAge/Info.plist;
+				INFOPLIST_FILE = JisuiKiloku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.KaraAge;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.JisuiKiloku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -405,17 +415,19 @@
 		};
 		649F8326249E4ABB00023865 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03CDECE8136AC7E3309DBC39 /* Pods-KaraAge.release.xcconfig */;
+			baseConfigurationReference = FA1126AE55E1E8CD9B761EFA /* Pods-JisuiKiloku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = J8LP9MW8T8;
-				INFOPLIST_FILE = KaraAge/Info.plist;
+				INFOPLIST_FILE = JisuiKiloku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.KaraAge;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.JisuiKiloku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -425,7 +437,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		649F830B249E4AB500023865 /* Build configuration list for PBXProject "KaraAge" */ = {
+		649F830B249E4AB500023865 /* Build configuration list for PBXProject "JisuiKiloku" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				649F8322249E4ABB00023865 /* Debug */,
@@ -434,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		649F8324249E4ABB00023865 /* Build configuration list for PBXNativeTarget "KaraAge" */ = {
+		649F8324249E4ABB00023865 /* Build configuration list for PBXNativeTarget "JisuiKiloku" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				649F8325249E4ABB00023865 /* Debug */,
