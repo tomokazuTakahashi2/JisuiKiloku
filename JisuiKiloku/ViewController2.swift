@@ -67,4 +67,7 @@ class ViewController2: UIViewController ,UIImagePickerControllerDelegate, UINavi
         editor.present(postViewController, animated: true, completion: nil)
     }
 
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

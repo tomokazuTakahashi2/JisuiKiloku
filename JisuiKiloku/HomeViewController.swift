@@ -138,6 +138,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+         return true
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+         return true
+    }
     //MARK: - シェアボタン
     @objc func shareButtonTap(_ sender: UIButton, forEvent event: UIEvent) {
     print("DEBUG_PRINT:シェアボタンがタップされました。")
