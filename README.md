@@ -17,3 +17,7 @@
 
 ## 画像イメージ
 ![](https://user-images.githubusercontent.com/52473279/85937993-03bf3a00-b944-11ea-9f2b-bec7547298ec.png)
+
+## App Store
+https://apps.apple.com/jp/app/%E8%87%AA%E7%82%8A%E8%A8%98%E9%8C%B2/id1520951078
+![スクリーンショット 2020-09-23 1 14 37](https://user-images.githubusercontent.com/52473279/93908975-3b1e6680-fd3a-11ea-977d-326ba175a30d.png)
