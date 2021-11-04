@@ -108,7 +108,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.starButton3.addTarget(self, action:#selector(starButton3(_:forEvent:)), for: .touchUpInside)
         cell.starButton4.addTarget(self, action:#selector(starButton4(_:forEvent:)), for: .touchUpInside)
         cell.starButton5.addTarget(self, action:#selector(starButton5(_:forEvent:)), for: .touchUpInside)
-        
+        //シェアボタン
         cell.shareButton.addTarget(self, action:#selector(shareButtonTap(_:forEvent:)), for: .touchUpInside)
 
         return cell

@@ -23,7 +23,7 @@
 		649F832E249E782800023865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F832D249E782800023865 /* HomeViewController.swift */; };
 		649F8330249E86D100023865 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649F832F249E86D000023865 /* GoogleService-Info.plist */; };
 		649F8332249E96D000023865 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F8331249E96D000023865 /* PostViewController.swift */; };
-		64C741BF24B48C400018258E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C741BE24B48C400018258E /* ViewController2.swift */; };
+		64C741BF24B48C400018258E /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C741BE24B48C400018258E /* ImagePickerViewController.swift */; };
 		82BE57E41123E8ED602A5892 /* Pods_JisuiKiloku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE76F35E9B3141EFBDB458B /* Pods_JisuiKiloku.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		649F832D249E782800023865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		649F832F249E86D000023865 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		649F8331249E96D000023865 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		64C741BE24B48C400018258E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		64C741BE24B48C400018258E /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		915DB4EAB57B146A19914E4A /* Pods-JisuiKiloku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JisuiKiloku.debug.xcconfig"; path = "Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1126AE55E1E8CD9B761EFA /* Pods-JisuiKiloku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JisuiKiloku.release.xcconfig"; path = "Target Support Files/Pods-JisuiKiloku/Pods-JisuiKiloku.release.xcconfig"; sourceTree = "<group>"; };
 		FBE76F35E9B3141EFBDB458B /* Pods_JisuiKiloku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JisuiKiloku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,13 +93,13 @@
 				649F8319249E4AB500023865 /* Main.storyboard */,
 				640E502224A6542C00E7C717 /* MyUINavigationController.swift */,
 				649F8317249E4AB500023865 /* ViewController.swift */,
-				64C741BE24B48C400018258E /* ViewController2.swift */,
+				64C741BE24B48C400018258E /* ImagePickerViewController.swift */,
 				649F832D249E782800023865 /* HomeViewController.swift */,
 				640E501E24A638FA00E7C717 /* ActivityItemsorce.swift */,
 				649F8331249E96D000023865 /* PostViewController.swift */,
-				649F8329249E6A9300023865 /* TableViewCell.swift */,
 				640E501C24A2495300E7C717 /* NextViewController.swift */,
 				649F831C249E4ABB00023865 /* Assets.xcassets */,
+				649F8329249E6A9300023865 /* TableViewCell.swift */,
 				649F832A249E6A9300023865 /* TableViewCell.xib */,
 				649F831E249E4ABB00023865 /* LaunchScreen.storyboard */,
 				649F8321249E4ABB00023865 /* Info.plist */,
@@ -250,7 +250,7 @@
 				640E501D24A2495300E7C717 /* NextViewController.swift in Sources */,
 				649F8332249E96D000023865 /* PostViewController.swift in Sources */,
 				640E502324A6542C00E7C717 /* MyUINavigationController.swift in Sources */,
-				64C741BF24B48C400018258E /* ViewController2.swift in Sources */,
+				64C741BF24B48C400018258E /* ImagePickerViewController.swift in Sources */,
 				649F832E249E782800023865 /* HomeViewController.swift in Sources */,
 				640E501F24A638FA00E7C717 /* ActivityItemsorce.swift in Sources */,
 				649F832B249E6A9300023865 /* TableViewCell.swift in Sources */,
@@ -402,14 +402,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = J8LP9MW8T8;
 				INFOPLIST_FILE = JisuiKiloku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.JisuiKiloku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -423,14 +423,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = J8LP9MW8T8;
 				INFOPLIST_FILE = JisuiKiloku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tomokazu.takahashi.JisuiKiloku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -1,5 +1,5 @@
 //
-//  ViewController2.swift
+//  ImagePickerViewController.swift
 //  JisuiKiloku
 //
 //  Created by Raphael on 2020/07/07.
@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import CLImageEditor
+//import CLImageEditor
 
-class ViewController2: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLImageEditorDelegate {
+class ImagePickerViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
     override func viewDidLoad() {
@@ -45,12 +45,17 @@ class ViewController2: UIViewController ,UIImagePickerControllerDelegate, UINavi
             // 撮影/選択された画像を取得する
             let image = info[.originalImage] as! UIImage
 
-            // あとでCLImageEditorライブラリで加工する
-            print("DEBUG_PRINT: image = \(image)")
-            // CLImageEditorにimageを渡して、加工画面を起動する。
-            let editor = CLImageEditor(image: image)!
-            editor.delegate = self
-            picker.pushViewController(editor, animated: true)
+//            // あとでCLImageEditorライブラリで加工する
+//            print("DEBUG_PRINT: image = \(image)")
+//            // CLImageEditorにimageを渡して、加工画面を起動する。
+//            let editor = CLImageEditor(image: image)!
+//            editor.delegate = self
+//            picker.pushViewController(editor, animated: true)
+            
+            // 投稿の画面を開く
+            let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
+            postViewController.image = image
+            picker.present(postViewController, animated: true, completion: nil)
         }
     }
 
@@ -59,13 +64,13 @@ class ViewController2: UIViewController ,UIImagePickerControllerDelegate, UINavi
         picker.dismiss(animated: true, completion: nil)
     }
 
-    // CLImageEditorで加工が終わったときに呼ばれるメソッド
-    func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
-        // 投稿の画面を開く
-        let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
-        postViewController.image = image!
-        editor.present(postViewController, animated: true, completion: nil)
-    }
+//    // CLImageEditorで加工が終わったときに呼ばれるメソッド
+//    func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
+//        // 投稿の画面を開く
+//        let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
+//        postViewController.image = image!
+//        editor.present(postViewController, animated: true, completion: nil)
+//    }
 
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
